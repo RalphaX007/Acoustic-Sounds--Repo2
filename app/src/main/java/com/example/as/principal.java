@@ -68,9 +68,9 @@ public class principal extends AppCompatActivity {
                 if (F==false){
 
                     //Activar y hacer visibles los botones del abanico:
-                    b2.setVisibility(100);
-                    b3.setVisibility(100);
-                    b4.setVisibility(100);
+                    b2.setVisibility(View.VISIBLE);
+                    b3.setVisibility(View.VISIBLE);
+                    b4.setVisibility(View.VISIBLE);
 
                     b2.setEnabled(true);
                     b3.setEnabled(true);
@@ -84,9 +84,9 @@ public class principal extends AppCompatActivity {
                 else if (F==true){
 
                     //Hacer lo contrario:
-                    b2.setVisibility(00);
-                    b3.setVisibility(00);
-                    b4.setVisibility(00);
+                    b2.setVisibility(View.INVISIBLE);
+                    b3.setVisibility(View.INVISIBLE);
+                    b4.setVisibility(View.INVISIBLE);
 
                     b2.setEnabled(false);
                     b3.setEnabled(false);
