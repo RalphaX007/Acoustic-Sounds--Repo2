@@ -100,7 +100,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.728"
-        app:srcCompat="@drawable/Trazadoblanco" />
+        app:srcCompat="@drawable/trazadoblanco" />
 
     <ImageView
         android:layout_width="63dp"
@@ -140,7 +140,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.72"
-        app:srcCompat="@drawable/Trazadoblanco" />
+        app:srcCompat="@drawable/trazadoblanco" />
 
     <TextView
         android:layout_width="wrap_content"

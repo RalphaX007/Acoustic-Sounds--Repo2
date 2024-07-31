@@ -23,6 +23,10 @@ public class principal extends AppCompatActivity {
         Button b3 = findViewById(R.id.button3);
         Button b4 = findViewById(R.id.button4);
 
+        b2.setVisibility(View.INVISIBLE);
+        b3.setVisibility(View.INVISIBLE);
+        b4.setVisibility(View.INVISIBLE);
+
         //Desactivar los botones del abanico antes de que el usuario lo toque
         b2.setEnabled(false);
         b3.setEnabled(false);

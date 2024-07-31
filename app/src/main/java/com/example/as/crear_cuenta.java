@@ -33,9 +33,9 @@ public class crear_cuenta extends AppCompatActivity {
 
                 if (text.isEmpty() || password.isEmpty()){
                     if (text.isEmpty()){
-                        nombre.setText("Ingresa tu correo");
+                        nombre.setHint("Ingresa tu correo");
                     } else {
-                        pass.setText("Ingresa la contraseña");
+                        pass.setHint("Ingresa la contraseña");
                     }
                 } else if (!text.isEmpty() && !password.isEmpty()){
                     Intent i = new Intent(crear_cuenta.this, informacion_1.class);
