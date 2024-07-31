@@ -1,5 +1,6 @@
 package com.example.as;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,22 +22,77 @@ public class principal extends AppCompatActivity {
         Button b2 = findViewById(R.id.button2);
         Button b3 = findViewById(R.id.button3);
         Button b4 = findViewById(R.id.button4);
+
+        //Desactivar los botones del abanico antes de que el usuario lo toque
+        b2.setEnabled(false);
+        b3.setEnabled(false);
+        b4.setEnabled(false);
+
+        //Botón vídeos
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent p = new Intent(principal.this, videos.class);
+
+                startActivity(p);
+            }
+        });
+
+        //Botón textos
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent t = new Intent(principal.this, textos.class);
+
+                startActivity(t);
+            }
+        });
+
+        //Botón practicas
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              Intent prac = new Intent(principal.this, seleccion.class);
+
+              startActivity(prac);
+            }
+        });
+
+
+        //Pulsar en el abanico:
         b.setOnClickListener(new View.OnClickListener() {
             boolean F = false;
             @Override
             public void onClick(View v) {
 
                 if (F==false){
-                    b2.setBackgroundColor(getColor(R.color.white));
-                    b3.setBackgroundColor(getColor(R.color.white));
-                    b4.setBackgroundColor(getColor(R.color.white));
 
+                    //Activar y hacer visibles los botones del abanico:
+                    b2.setVisibility(100);
+                    b3.setVisibility(100);
+                    b4.setVisibility(100);
+
+                    b2.setEnabled(true);
+                    b3.setEnabled(true);
+                    b4.setEnabled(true);
+
+                    //Reestablecer la variable para cambiar el botón
                     F = true;
-                } else if (F==true){
-                    b2.setBackgroundColor(getColor(R.color.black));
-                    b3.setBackgroundColor(getColor(R.color.black));
-                    b4.setBackgroundColor(getColor(R.color.black));
+                }
 
+
+                else if (F==true){
+
+                    //Hacer lo contrario:
+                    b2.setVisibility(00);
+                    b3.setVisibility(00);
+                    b4.setVisibility(00);
+
+                    b2.setEnabled(false);
+                    b3.setEnabled(false);
+                    b4.setEnabled(false);
+
+                    //Reestablecer la variable para cambiar el botón
                     F = false;
                 }
             }
