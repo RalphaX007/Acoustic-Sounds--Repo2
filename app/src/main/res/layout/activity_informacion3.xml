@@ -25,14 +25,14 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="292dp"
-        android:layout_height="315dp"
+        android:layout_width="262dp"
+        android:layout_height="286dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/brote2" />
 
     <ImageView
@@ -49,16 +49,15 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="313dp"
-        android:layout_height="235dp"
+        android:layout_width="293dp"
+        android:layout_height="199dp"
         android:text="Y por último. \n\nIrás desbloqueando canciones a manera de trofeo conforme vayas completando prácticas.\nAl final te convertirás en todo un guitarrista, así que\n\nA APRENDER!"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -98,13 +97,14 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="203dp"
-        android:layout_height="192dp"
+        android:layout_width="178dp"
+        android:layout_height="147dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123"
+        app:layout_constraintVertical_bias="0.09"
         app:srcCompat="@drawable/bocina" />
 
 

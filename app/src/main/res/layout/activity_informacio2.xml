@@ -26,14 +26,13 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="292dp"
-        android:layout_height="315dp"
+        android:layout_width="253dp"
+        android:layout_height="221dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029"
+        app:layout_constraintVertical_bias="0.044"
         app:srcCompat="@drawable/brote2" />
 
     <ImageView
@@ -50,8 +49,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="313dp"
-        android:layout_height="235dp"
+        android:layout_width="267dp"
+        android:layout_height="196dp"
         android:text="La funcionalidad de la aplicación es bastante sencilla: \n\nHay varios niveles de experiencia en los que podrás estar. Iniciarás de principiante, luego de eso irás a novato, luego a intermedio y por último a avanzado. Cada uno de estos niveles contiene lecciones y prácticas distintas que deberás completar para pasar al siguiente. \n\nTAN DIVERTIDO COMO UN VIDEOJUEGO! "
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -59,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintVertical_bias="0.484" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -111,8 +110,8 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="202dp"
-        android:layout_height="224dp"
+        android:layout_width="179dp"
+        android:layout_height="169dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

@@ -26,8 +26,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="303dp"
-        android:layout_height="322dp"
+        android:layout_width="289dp"
+        android:layout_height="275dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,8 +49,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="313dp"
-        android:layout_height="235dp"
+        android:layout_width="285dp"
+        android:layout_height="203dp"
         android:text="HOLA! Bienvenid@\n\nNosotros somos Abstract, una empresa dedicada al desarrollo de software y aplicaciones móviles. Y hoy te presentamos Acoustic Sounds, una app hecha para todo aquel que desee aprender guitarra de manera gratuita y desde la comodidad de tu casa"
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -58,12 +58,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintVertical_bias="0.455" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="247dp"
-        android:layout_height="268dp"
+        android:layout_height="218dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

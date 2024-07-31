@@ -104,6 +104,7 @@
         android:layout_height="83dp"
         android:backgroundTint="#FF5900"
         android:text="DYLAN"
+        android:textSize="1sp"
         android:textColor="#FF5900"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
