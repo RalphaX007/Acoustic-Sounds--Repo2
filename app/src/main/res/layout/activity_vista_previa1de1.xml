@@ -62,7 +62,7 @@
         android:layout_width="262dp"
         android:layout_height="78dp"
         android:rotation="-3"
-        android:text="COMPLETA ESTE TEMA PARA DESBLOQUEAR EL SIGUIENTE"
+        android:text="COMPLETA LA LECCIÖN ANTERIOR PARA DESBLOQUEAR ESTE TEMA"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="italic"
