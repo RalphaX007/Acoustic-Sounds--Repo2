@@ -2,7 +2,7 @@ package com.example.as;
 
 public class Cuerdas {
     //Matriz que representa las cuerdas y el número de trastes para las clases
-    double[][] cuerdas = new double[7][13];
+    double[][] cuerdas = new double[6][13];
 
     public double[][] getCuerdas() {
 
