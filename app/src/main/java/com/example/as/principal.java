@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,10 @@ public class principal extends AppCompatActivity {
         Button b2 = findViewById(R.id.button2);
         Button b3 = findViewById(R.id.button3);
         Button b4 = findViewById(R.id.button4);
+
+        ImageView videito = findViewById(R.id.imageView27);
+
+        videito.setVisibility(View.INVISIBLE);
 
         b2.setVisibility(View.INVISIBLE);
         b3.setVisibility(View.INVISIBLE);
@@ -76,6 +81,8 @@ public class principal extends AppCompatActivity {
                     b3.setVisibility(View.VISIBLE);
                     b4.setVisibility(View.VISIBLE);
 
+                    videito.setVisibility(View.VISIBLE);
+
                     b2.setEnabled(true);
                     b3.setEnabled(true);
                     b4.setEnabled(true);
@@ -91,6 +98,8 @@ public class principal extends AppCompatActivity {
                     b2.setVisibility(View.INVISIBLE);
                     b3.setVisibility(View.INVISIBLE);
                     b4.setVisibility(View.INVISIBLE);
+
+                    videito.setVisibility(View.INVISIBLE);
 
                     b2.setEnabled(false);
                     b3.setEnabled(false);

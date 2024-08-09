@@ -13,6 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class vista_previa_1de1 extends AppCompatActivity {
 
+    static int segprac = 1000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,38 +22,13 @@ public class vista_previa_1de1 extends AppCompatActivity {
         setContentView(R.layout.activity_vista_previa1de1);
 
         Button b = findViewById(R.id.iniciar);
-
-        Cuerdas hola = new Cuerdas();
-        hola.getCuerdas();
-
-        //Literalmente las tablaturas:
-        boolean[][] tabs = new boolean[6][4];
-        //Justo ahora estoy pensando en como hacer que un dato marque dos veces true, pero aún no se como:(
-        tabs[6][0] = true;
-        tabs[6][0] = true;
-
-        tabs[6][0] = true;
-        tabs[6][0] = true;
-        tabs[6][3] = true;
-
-        tabs[5][0] = true;
-        tabs[5][0] = true;
-
-        tabs[5][2] = true;
-        tabs[5][2] = true;
-
-        tabs[5][2] = true;
-        tabs[5][2] = true;
-        tabs[6][3] = true;
-
-
-
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(vista_previa_1de1.this, practica.class);
 
                 startActivity(i);
+
             }
         });
 
@@ -60,5 +37,34 @@ public class vista_previa_1de1 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    //Literalmente las tablaturas:
+    boolean[][] tabs = new boolean[6][12];
+
+
+
+    public boolean[][] getTabs() {
+        //Justo ahora estoy pensando en como hacer que un dato marque dos veces true, pero aún no se como:(
+
+        tabs[6][0] = true;
+        tabs[6][0] = true;
+
+        tabs[6][0] = true;
+        tabs[6][0] = true;
+        tabs[6][3] = true;
+
+        tabs[5][0] = true;
+        tabs[5][0] = true;
+
+        tabs[5][2] = true;
+        tabs[5][2] = true;
+
+        tabs[5][2] = true;
+        tabs[5][2] = true;
+        tabs[6][3] = true;
+
+        tabs[6][4] = false;
+        return tabs;
     }
 }
