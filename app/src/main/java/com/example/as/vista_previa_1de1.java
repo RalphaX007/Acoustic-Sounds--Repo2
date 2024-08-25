@@ -27,6 +27,7 @@ public class vista_previa_1de1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(vista_previa_1de1.this, practica.class);
 
+                i.putExtra("actividad_anterior", getLocalClassName());
                 startActivity(i);
 
             }

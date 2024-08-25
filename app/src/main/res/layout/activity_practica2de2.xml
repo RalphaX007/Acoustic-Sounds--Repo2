@@ -48,33 +48,34 @@
     <ImageView
         android:layout_width="257dp"
         android:layout_height="236dp"
-        android:layout_marginEnd="672dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.993"
+        app:layout_constraintVertical_bias="0.928"
         app:srcCompat="@drawable/musical" />
 
     <ImageView
         android:layout_width="461dp"
         android:layout_height="464dp"
-        android:layout_marginStart="488dp"
+        android:layout_marginStart="476dp"
         android:rotation="69"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192"
+        app:layout_constraintVertical_bias="0.589"
         app:srcCompat="@drawable/linea" />
 
     <ImageView
         android:layout_width="461dp"
         android:layout_height="464dp"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="112dp"
         android:rotation="-68"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192"
+        app:layout_constraintVertical_bias="0.589"
         app:srcCompat="@drawable/linea" />
 
     <ImageView
