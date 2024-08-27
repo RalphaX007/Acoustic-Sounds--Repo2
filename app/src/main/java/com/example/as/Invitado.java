@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,58 +12,42 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class vista_previa_1de3 extends AppCompatActivity {
+public class Invitado extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_vista_previa1de3);
+        setContentView(R.layout.activity_invitado);
 
-        Button b = findViewById(R.id.iniciar);
+        EditText nombre = findViewById(R.id.nombre);
+        EditText pass = findViewById(R.id.contaseña);
+
+        Button b = findViewById(R.id.prodeguir);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(vista_previa_1de3.this, practica.class);
 
-                i.putExtra("actividad_anterior", getLocalClassName());
-                startActivity(i);
+                String text = nombre.getText().toString().trim();
+                String password = pass.getText().toString().trim();
 
+                if (text.isEmpty() || password.isEmpty()){
+                    if (text.isEmpty()){
+                        nombre.setHint("Ingresa tu correo");
+                    } else {
+                        pass.setHint("Ingresa la contraseña");
+                    }
+                } else if (!text.isEmpty() && !password.isEmpty()){
+                    Intent i = new Intent(Invitado.this, principal.class);
+
+                    startActivity(i);
+                }
             }
         });
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-    //Literalmente las tablaturas:
-    boolean[][] tabs = new boolean[6][12];
-
-
-
-    public boolean[][] getTabs() {
-        //Justo ahora estoy pensando en como hacer que un dato marque dos veces true, pero aún no se como:(
-
-        tabs[6][0] = true;
-        tabs[6][0] = true;
-
-        tabs[6][0] = true;
-        tabs[6][0] = true;
-        tabs[6][3] = true;
-
-        tabs[5][0] = true;
-        tabs[5][0] = true;
-
-        tabs[5][2] = true;
-        tabs[5][2] = true;
-
-        tabs[5][2] = true;
-        tabs[5][2] = true;
-        tabs[6][3] = true;
-
-        tabs[6][4] = false;
-        return tabs;
     }
 }

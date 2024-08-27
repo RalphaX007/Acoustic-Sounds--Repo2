@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -18,30 +17,56 @@ public class practica extends AppCompatActivity {
     private Cuerdas hola;
     private double[][] cuerdas;
     private boolean[][] tabs;
-    private int segprac = 3000;
+    private int segprac =3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_practica);
-        // Inicializar variables después de setContentView
+
+
+
+
         actividadAnterior = getIntent().getStringExtra("actividad_anterior");
+
+              if (actividadAnterior.equalsIgnoreCase("vista_previa1de1")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa2de1")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa3de1")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa1de2")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa2de2")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa3de2")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa1de4")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa2de4")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa3de4")){
+                  tabs = new vista_previa_1de1().getTabs();
+        }
+
+
+
+
         text = findViewById(R.id.textView8);
         hola = new Cuerdas();
-        tabs = new boolean[6][12]; // Asegúrate de inicializar las dimensiones correctamente
+        tabs = new boolean[6][12];
 
         new Handler().postDelayed(() -> {
             for (int i = 0; i < 6; i++) {
                 for (int o = 0; o < 12; o++) {
                     if (tabs[i][o] = true) {
-                        // Asegúrate de que cuerdas[i][o] es un recurso de string válido o convierte a string manualmente
                         text.setText(String.valueOf(cuerdas[i][o]));
                         break;
                     }
                 }
             }
-            // finish(); // Quita esta línea si no quieres cerrar la actividad automáticamente
+
         }, segprac);
 
 

@@ -37,4 +37,32 @@ public class vista_previa_2de1 extends AppCompatActivity {
             return insets;
         });
     }
+    //Literalmente las tablaturas:
+    boolean[][] tabs = new boolean[6][12];
+
+
+
+    public boolean[][] getTabs() {
+        //Justo ahora estoy pensando en como hacer que un dato marque dos veces true, pero aún no se como:(
+
+        tabs[6][0] = true;
+        tabs[6][0] = true;
+
+        tabs[6][0] = true;
+        tabs[6][0] = true;
+        tabs[6][3] = true;
+
+        tabs[5][0] = true;
+        tabs[5][0] = true;
+
+        tabs[5][2] = true;
+        tabs[5][2] = true;
+
+        tabs[5][2] = true;
+        tabs[5][2] = true;
+        tabs[6][3] = true;
+
+        tabs[6][4] = false;
+        return tabs;
+    }
 }

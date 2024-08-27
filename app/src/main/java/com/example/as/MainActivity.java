@@ -19,6 +19,15 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         Button b = findViewById(R.id.sesion);
+Button b2 = findViewById(R.id.Invitado);
+b2.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent i = new Intent(MainActivity.this, crear_cuenta.class);
+
+        startActivity(i);
+    }
+});
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
