@@ -3,8 +3,11 @@ package com.example.as;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,100 +17,56 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class principal extends AppCompatActivity {
 
+    private Spinner spinner;
+    Button practicar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_principal);
-        Button b = findViewById(R.id.button);
-        Button b2 = findViewById(R.id.button2);
-        Button b3 = findViewById(R.id.button3);
-        Button b4 = findViewById(R.id.button4);
-
-        ImageView videito = findViewById(R.id.imageView27);
-
-        videito.setVisibility(View.INVISIBLE);
-
-        b2.setVisibility(View.INVISIBLE);
-        b3.setVisibility(View.INVISIBLE);
-        b4.setVisibility(View.INVISIBLE);
-
-        //Desactivar los botones del abanico antes de que el usuario lo toque
-        b2.setEnabled(false);
-        b3.setEnabled(false);
-        b4.setEnabled(false);
-
-        //Botón vídeos
-        b2.setOnClickListener(new View.OnClickListener() {
+        spinner = findViewById(R.id.spinner);
+        practicar = findViewById(R.id.practicar);
+        practicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent p = new Intent(principal.this, videos.class);
-
-                startActivity(p);
+                Intent intent = new Intent(principal.this, seleccion2.class);
+                startActivity(intent);
             }
         });
 
-        //Botón textos
-        b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent t = new Intent(principal.this, textos.class);
+        String[] opciones = {"Tutoriales", "tutorial 1", "tutorial 2","tutorial 3","tutorial 4"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, opciones);
+        spinner.setAdapter(adapter);
 
-                startActivity(t);
-            }
-        });
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        //Botón practicas
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              Intent prac = new Intent(principal.this, seleccion.class);
+                switch (position) {
+                    case 1:
 
-              startActivity(prac);
-            }
-        });
+                        Intent intent1 = new Intent(principal.this, video_leccion.class);
+                        startActivity(intent1);
+                        break;
 
+                    case 2:
 
-        //Pulsar en el abanico:
-        b.setOnClickListener(new View.OnClickListener() {
-            boolean F = false;
-            @Override
-            public void onClick(View v) {
+                        Intent intent2 = new Intent(principal.this, video_leccion2.class);
+                        startActivity(intent2);
+                        break;
+                    case 3:
 
-                if (F==false){
-
-                    //Activar y hacer visibles los botones del abanico:
-                    b2.setVisibility(View.VISIBLE);
-                    b3.setVisibility(View.VISIBLE);
-                    b4.setVisibility(View.VISIBLE);
-
-                    videito.setVisibility(View.VISIBLE);
-
-                    b2.setEnabled(true);
-                    b3.setEnabled(true);
-                    b4.setEnabled(true);
-
-                    //Reestablecer la variable para cambiar el botón
-                    F = true;
+                        Intent intent3 = new Intent(principal.this, video_leccion3.class);
+                        startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4  = new Intent(principal.this, video_leccion4.class);
+                        startActivity(intent4);
+                        break;
                 }
+            }
 
-
-                else if (F==true){
-
-                    //Hacer lo contrario:
-                    b2.setVisibility(View.INVISIBLE);
-                    b3.setVisibility(View.INVISIBLE);
-                    b4.setVisibility(View.INVISIBLE);
-
-                    videito.setVisibility(View.INVISIBLE);
-
-                    b2.setEnabled(false);
-                    b3.setEnabled(false);
-                    b4.setEnabled(false);
-
-                    //Reestablecer la variable para cambiar el botón
-                    F = false;
-                }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
             }
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

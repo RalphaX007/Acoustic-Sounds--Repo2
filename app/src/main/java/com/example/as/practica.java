@@ -33,21 +33,27 @@ public class practica extends AppCompatActivity {
               if (actividadAnterior.equalsIgnoreCase("vista_previa1de1")){
                   tabs = new vista_previa_1de1().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa2de1")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_2de1().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa3de1")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_3de1().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa1de2")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_1de2().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa2de2")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_2de2().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa3de2")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_3de2().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa1de3")){
+                  tabs = new vista_previa_1de3().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa2de3")){
+                  tabs = new vista_previa_2de3().getTabs();
+        }else if (actividadAnterior.equalsIgnoreCase("vista_previa3de3")){
+                  tabs = new vista_previa_3de3().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa1de4")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_1de3().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa2de4")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_2de3().getTabs();
         }else if (actividadAnterior.equalsIgnoreCase("vista_previa3de4")){
-                  tabs = new vista_previa_1de1().getTabs();
+                  tabs = new vista_previa_3de3().getTabs();
         }
 
 

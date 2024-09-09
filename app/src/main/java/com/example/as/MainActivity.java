@@ -23,7 +23,7 @@ Button b2 = findViewById(R.id.Invitado);
 b2.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent i = new Intent(MainActivity.this, crear_cuenta.class);
+        Intent i = new Intent(MainActivity.this, Invitado.class);
 
         startActivity(i);
     }
